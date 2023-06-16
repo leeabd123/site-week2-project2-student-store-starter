@@ -31,6 +31,9 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 ## Demo-Video
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a2bd4c2f10844d6faa21715919e657e0?sid=e70a75f1-1eb6-44de-aed1-d97c70d789dc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
+[![Watch the video](https://github.com/leeabd123/site-week2-project2-student-store-starter/assets/90123334/0c27f621-bcf7-4dc3-a9eb-ab58e6e6efdc)](https://www.loom.com/embed/a2bd4c2f10844d6faa21715919e657e0?sid=e70a75f1-1eb6-44de-aed1-d97c70d789dc)
+
+
 ## *Week 3* Application Features
 
 ### Core Features
