@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+}
+.footer-categorys {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    column-gap: 30px;
+    background-color: #fff;
+    width: 1600px;
+}

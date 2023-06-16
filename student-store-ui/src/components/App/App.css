@@ -13,4 +13,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
+}
+
+body {
+  background-color: #f7f7f7;
+
 }

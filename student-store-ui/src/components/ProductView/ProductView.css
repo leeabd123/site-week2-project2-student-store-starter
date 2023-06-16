@@ -1,0 +1,10 @@
+.product-view {
+    display: flex;
+    width: 300px;
+    background-color: red;
+}
+.preview-window-container {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}

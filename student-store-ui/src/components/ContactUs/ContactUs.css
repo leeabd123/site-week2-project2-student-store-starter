@@ -1,0 +1,38 @@
+.contact-us {
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.contact-us-container {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: 70px;
+    width: 1200px;
+
+}
+
+.contact-us-text {
+  
+    margin-top: 40px;
+    width: 900px;
+}
+
+.contact-us-logo-right {
+    width: 300px;
+    height: 300px;
+}
+
+.contact-us-title-text {
+    /* margin-left: 200px; */
+    /* margin-right: 150px; */
+    margin-right: 1000px;
+
+    
+}
