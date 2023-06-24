@@ -5,9 +5,10 @@ import {useState} from "react"
 import ProductGrid from "../ProductGrid/ProductGrid"
 
 export default function Feed(props) {
+  
     const [searchQuery, setSearchQuery] = useState("");
 
-    const {products} = props;
+    const {products, handleAddItemToCart, handleRemoveItemToCart} = props;
     return (
         <div>
             <div className="search-row-container">
@@ -18,7 +19,7 @@ export default function Feed(props) {
             <div className="products-container">
                 <h1 className="product-header" id="buy-id">Best Selling Products</h1>
                 {/* <Menu products={props.products} searchQuery={searchQuery} /> */}
-                <ProductGrid products={props.products} searchQuery={searchQuery} />
+                <ProductGrid products={props.products} searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart} />
 
             </div>
 

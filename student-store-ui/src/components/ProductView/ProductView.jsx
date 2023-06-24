@@ -3,6 +3,7 @@ import ProductCard from '../ProductCard/ProductCard';
 
 export default function ProductView(props) {
   const { product, productId, quantity, showDescription, cateogry, image, price, name, handleAddItemToCart, handleRemoveItemToCart } = props;
+  
   return (
     <div className="product-view">
       <h1 className="product-id">Product #{product.id}</h1>

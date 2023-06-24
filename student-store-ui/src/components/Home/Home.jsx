@@ -14,7 +14,7 @@ export default function Home(props) {
 
       </div>
       <div className="feed-container">
-       <Feed products={props.products}/>
+       <Feed products={props.products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
 
       </div>
     </div>

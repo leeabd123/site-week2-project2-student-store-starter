@@ -5,12 +5,12 @@ import ProductCard from "../ProductCard/ProductCard"
 
 
 export default function ProductGrid(props) {
-    const { products, searchQuery } = props
-    console.log("search", props.searchQuery, "productgrid");
+
+  const { products, searchQuery, handleAddItemToCart, handleRemoveItemToCart } = props;
 
     return (
       <div className="product-grid">
-        <Clothing products={props.products} searchQuery={props.searchQuery}/>
+        <Clothing products={props.products} searchQuery={props.searchQuery}  handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
       </div>
     )
   }
@@ -18,12 +18,13 @@ export default function ProductGrid(props) {
 
   export function Clothing(props) {
     const [activeIndex, setActiveIndex] = useState(0)
-    const { products, searchQuery } = props
+    const { products, searchQuery, handleAddItemToCart, handleRemoveItemToCart } = props
 
-    
+
     
     const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase()) );
+
     
    
     return (
@@ -37,7 +38,7 @@ export default function ProductGrid(props) {
             
             >   
             
-            <Products products={filteredProducts} category="all" searchQuery={searchQuery}/>
+            <Products products={filteredProducts} category="all" searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
         
             </Panel>
         </div>
@@ -49,7 +50,7 @@ export default function ProductGrid(props) {
             
             >   
             
-            <Products products={filteredProducts} category="clothing" searchQuery={searchQuery}/>
+            <Products products={filteredProducts} category="clothing" searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
 
             </Panel>
 
@@ -62,7 +63,7 @@ export default function ProductGrid(props) {
             
             >   
             
-            <Products products={filteredProducts} category="food" searchQuery={searchQuery}/>
+            <Products products={filteredProducts} category="food" searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
 
         
             </Panel>
@@ -77,7 +78,7 @@ export default function ProductGrid(props) {
             
             >   
             
-            <Products products={filteredProducts} category="accessories" searchQuery={searchQuery}/>
+            <Products products={filteredProducts} category="accessories" searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
 
         
             </Panel>
@@ -91,7 +92,7 @@ export default function ProductGrid(props) {
             
             >   
             
-            <Products products={filteredProducts} category="tech" searchQuery={searchQuery}/>
+            <Products products={filteredProducts} category="tech" searchQuery={searchQuery} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
 
         
             </Panel>
@@ -127,8 +128,7 @@ export function Children(props) {
 }
   
   export function Products(props) {
-    const {products, isSearching, searchQuery} = props;
-    
+    const {products, isSearching, searchQuery, handleAddItemToCart, handleRemoveItemToCart} = props;
 
     const [cartnum, setCount] = useState(0);
 
@@ -156,13 +156,13 @@ export function Children(props) {
             if (element.category === props.category) {
               return (
                 <div className="a-product-div">
-                <ProductCard product={element} productId={element.id} quantity="0" category={element.category} showDescription={false} image={element.image} price={element.price} name={element.name}/>
+                <ProductCard product={element} productId={element.id} quantity="0" category={element.category} showDescription={false} image={element.image} price={element.price} name={element.name} handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
                 </div>
               );
             } else if (props.category == "all") {
                 return (
                     <div className="a-product-div">
-                        <ProductCard product={element} productId={element.id} quantity="0" category={element.category} showDescription={false} image={element.image} price={element.price} name={element.name}/>
+                        <ProductCard product={element} productId={element.id} quantity="0" category={element.category} showDescription={false} image={element.image} price={element.price} name={element.name}  handleAddItemToCart={handleAddItemToCart} handleRemoveItemToCart={handleRemoveItemToCart}/>
                     </div>
                   );
              

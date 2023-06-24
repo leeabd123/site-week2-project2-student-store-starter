@@ -7,20 +7,27 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard(props) {
     const { product, productId, quantity, showDescription, category, image, price, name, handleAddItemToCart, handleRemoveItemToCart  } = props;
-    
+
+
     const [cartnum, setCount] = useState(0);
 
     const handleClickIncrement = () => {
         setCount(cartnum + 1);
+        handleAddItemToCart(productId)
+        console.log("logging product increment", productId)
         
     };
 
     const handleClickDecrement = () => {
         if(cartnum - 1 >= 0) {
             setCount(cartnum - 1);
-        }
+            handleRemoveItemToCart(productId);
+
+
+        } 
+
+        console.log("logging product decrement", productId)
     };
-    console.log("enteredproductcard")
 
     const format = price.toLocaleString('en-US', {
         style: 'currency',
